@@ -1,5 +1,9 @@
 # Hanami DB Provider Example
 
+## Context
+
+More context about this bug can be found on [hanami/hanami#1490](https://github.com/hanami/hanami/pull/1490)
+
 This app will raise an error because the `Parent` slice does not have a db configuration. To reproduce 
 
 1. clone this repo
