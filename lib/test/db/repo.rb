@@ -4,7 +4,7 @@ require "hanami/db/repo"
 
 module Test
   module DB
-    class Repo < Hanami::DB::Repo
+    class Repo < Hanami::Db::Repo
     end
   end
 end
