@@ -16,8 +16,9 @@ This app will raise an error because the `Parent` slice does not have a db confi
 
 ```ruby
 test[development]> parent.boot
-/Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/providers/db.rb:293:in 'Hanami::Providers::DB#ensure_database_gem': The "pg" gem is required to connect to postgres://8e605feb14a98df3958f88e0275402c0f729b63c48bc6d9b9eb4d8c93921bd34:postgres@localhost:5432/child. Please add it to your Gemfile. (Hanami::ComponentLoadError)
-	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/providers/db.rb:197:in 'block in Hanami::Providers::DB#configure_gateways'
+/Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/providers/db.rb:194:in 'block (2 levels) in Hanami::Providers::DB#configure_gateways': A database_url for gateway default is required to start :db. (Hanami::ComponentLoadError)
+	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/providers/db.rb:193:in 'Hash#fetch'
+	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/providers/db.rb:193:in 'block in Hanami::Providers::DB#configure_gateways'
 	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/providers/db.rb:192:in 'Hash#each'
 	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/providers/db.rb:192:in 'Hanami::Providers::DB#configure_gateways'
 	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/providers/db.rb:31:in 'Hanami::Providers::DB#finalize_config'
@@ -32,6 +33,6 @@ test[development]> parent.boot
 	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/dry-system-1.2.2/lib/dry/system/container.rb:663:in 'Dry::System::Container.run_hooks'
 	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/dry-system-1.2.2/lib/dry/system/container.rb:322:in 'Dry::System::Container.finalize!'
 	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/slice.rb:330:in 'Hanami::Slice::ClassMethods#boot'
-	from /Users/aaron/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/hanami-2.2.1/lib/hanami/slice_registrar.rb:64:in 'Hash#each_value'
-	... 11 levels...
+	... 9 levels...
+test[development]> 
 ```
